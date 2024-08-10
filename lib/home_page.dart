@@ -40,28 +40,19 @@ class HomePage extends StatelessWidget {
               width: 300,
             ),
             const SizedBox(height: 16),
-            GestureDetector(
-              onTap: () {
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Button Pressed!'),
                   ),
                 );
               },
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Container(
-                  height: 32,
-                  width: 96,
-                  color: Colors.green,
-                  child: const Center(
-                    child: Text(
-                      'Press Me',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
+              child: const Text('Press Me'),
             ),
           ],
         ),
